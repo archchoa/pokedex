@@ -1,4 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    images: {
+        dangerouslyAllowSVG: true,
+        remotePatterns: [
+          {
+            protocol: "https",
+            hostname: "raw.githubusercontent.com",
+            port: "",
+          },
+        ]
+    }
+};
 
 export default nextConfig;
